@@ -20,4 +20,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "elessa-build-logic"
+include(":app")
 include(":convention")
