@@ -1,0 +1,138 @@
+[versions]
+# Android
+koinAndroidxComposeVersion = "3.5.6"
+lifecycleRuntimeKtxVersion = "2.8.7"
+annotationJvmVersion = "1.9.1"
+
+# Android Compose
+composeVersion = "1.5.11"
+composeBomVersion = "2025.04.00"
+navigationComposeVersion = "2.8.9"
+
+# Gradle plugins
+androidGradleVersion = "8.5.2"
+kotlinVersion = "2.0.21"
+kspVersion = "2.0.21-1.0.27"
+detektVersion = "1.22.0"
+
+# Testing
+junitVersion = "4.13.2"
+
+# Android Testing
+androidxTestExtVersion = "1.2.1"
+espressoVersion = "3.6.1"
+
+# Mockk
+mockkVersion = "1.13.10"
+
+# Jacoco
+jacocoVersion = "0.8.9"
+
+# Firebase
+firebaseVersion = "4.4.2"
+firebaseBomVersion = "33.12.0"
+appcompatVersion = "1.7.0"
+materialVersion = "1.12.0"
+
+# Coil
+coilVersion = "2.5.0"
+coreKtxVersion = "1.16.0"
+
+# Moshi
+moshiVersion = "1.15.1"
+
+# Retrofit
+retrofitVersion = "2.11.0"
+
+# Coroutines
+coroutinesVersion = "1.7.3"
+
+# Koin
+koinVersion = "3.5.6"
+koinAnnotationsVersion = "1.3.0"
+kotlinTestVersion = "1.9.22"
+koinTestVersion = "3.5.3"
+runtimeVersion = "1.8.1"
+
+# Lottie
+lottieVersion = "3.4.0"
+
+[libraries]
+# Android
+androidx-lifecycleRuntime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtxVersion" }
+androidx-annotation-jvm = { group = "androidx.annotation", name = "annotation-jvm", version.ref = "annotationJvmVersion" }
+
+# Android compose
+androidx-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "runtimeVersion" }
+compose-navigation = { module = "androidx.navigation:navigation-compose", version.ref = "navigationComposeVersion" }
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBomVersion" }
+compose-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+compose-material = { module = "androidx.compose.material3:material3" }
+compose-material-window-size = { module = "androidx.compose.material3:material3-window-size-class" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+compose-ui = { module = "androidx.compose.ui:ui" }
+
+# Coil
+coil = { module = "io.coil-kt:coil-compose", version.ref = "coilVersion" }
+
+# Lottie
+lottie = { module = "com.airbnb.android:lottie", version.ref = "lottieVersion" }
+
+# Moshi
+moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshiVersion" }
+moshi-kotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshiVersion" }
+moshi-ksp = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshiVersion" }
+moshi-adapters = { module = "com.squareup.moshi:moshi-adapters", version.ref = "moshiVersion" }
+
+# Retrofit
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofitVersion" }
+retrofit-moshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "retrofitVersion" }
+
+# Gradle plugins
+android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradleVersion" }
+kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlinVersion" }
+detekt-gradle-plugin = { group = "io.gitlab.arturbosch.detekt", name = "detekt-gradle-plugin", version.ref = "detektVersion" }
+
+# Koin
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koinVersion" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinVersion" }
+koin-annotations = { module = "io.insert-koin:koin-annotations", version.ref = "koinAnnotationsVersion" }
+koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinAndroidxComposeVersion" }
+koin-ksp-compiler = { module = "io.insert-koin:koin-ksp-compiler", version.ref = "koinAnnotationsVersion" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlinTestVersion" }
+koin-test = { module = "io.insert-koin:koin-test", version.ref = "koinTestVersion" }
+
+# Testing
+junit = { module = "junit:junit", version.ref = "junitVersion" }
+
+# Android Testing
+androidx-test-ext = { module = "androidx.test.ext:junit", version.ref = "androidxTestExtVersion" }
+androidx-test-espresso = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoVersion" }
+compose-ui-test = { module = "androidx.compose.ui:ui-test-junit4" }
+compose-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
+
+# Coroutines
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutinesVersion" }
+
+# Mockk
+mockk-android = { module = "io.mockk:mockk-android", version.ref = "mockkVersion" }
+mockk-agent = { module = "io.mockk:mockk-agent-jvm", version.ref = "mockkVersion" }
+
+# Firebase
+firebase = { module = "com.google.gms:google-services", version.ref = "firebaseVersion" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBomVersion" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics-ktx" }
+
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompatVersion" }
+material = { group = "com.google.android.material", name = "material", version.ref = "materialVersion" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtxVersion" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradleVersion" }
+android-library = { id = "com.android.library", version.ref = "androidGradleVersion" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinVersion" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlinVersion" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
+
+[bundles]
+compose-bundle-ui = ["compose-ui", "compose-material", "compose-material-window-size", "compose-tooling-preview"]

@@ -1,0 +1,48 @@
+# Archivos generados por el IDE
+*.iml
+.idea/
+!.idea/codeStyles
+
+# Archivos locales del entorno
+local.properties
+.DS_Store
+
+# Build outputs
+/build/
+.cxx/
+.externalNativeBuild/
+
+# Gradle
+.gradle/
+**/build/
+**/captures/
+
+# Cache
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+
+# Otros
+*.log
+*.keystore
+
+# Android Studio
+captures/
+output.json
+
+# Archivos temporales de test y configuración
+*.apk
+*.ap_
+*.dex
+*.class
+
+# IntelliJ
+out/
+
+# MacOS
+._*
+/.kotlin/
+/.idea/
