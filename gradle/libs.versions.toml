@@ -57,6 +57,9 @@ runtimeVersion = "1.8.1"
 # Lottie
 lottieVersion = "3.4.0"
 
+# JFrog Artifactory
+jfrogArtifactoryVersion = "5.2.5"
+
 [libraries]
 # Android
 androidx-lifecycleRuntime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtxVersion" }
@@ -128,6 +131,7 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtxVersion" }
 
 [plugins]
+jfrog-artifactory = { id = "com.jfrog.artifactory", version = "jfrogArtifactoryVersion" }
 android-application = { id = "com.android.application", version.ref = "androidGradleVersion" }
 android-library = { id = "com.android.library", version.ref = "androidGradleVersion" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinVersion" }
