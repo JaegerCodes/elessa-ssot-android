@@ -1,5 +1,6 @@
 plugins {
     `kotlin-dsl`
+    `maven-publish`
 }
 
 dependencies {
@@ -58,6 +59,48 @@ gradlePlugin {
         register("androidElessaData") {
             id = "llamasoft.library.data"
             implementationClass = "AndroidDataConventionPlugin"
+        }
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            from(components["java"])
+
+            pom {
+                name.set("Elessa Build Logic")
+                description.set("Shared build logic for Elessa Android projects")
+                url.set("https://github.com/llamasoft/elessa-build-logic")
+
+                licenses {
+                    license {
+                        name.set("MIT License")
+                        url.set("https://opensource.org/licenses/MIT")
+                    }
+                }
+
+                developers {
+                    developer {
+                        id.set("llamasoft")
+                        name.set("Llama Software")
+                        email.set("dev@llamasoft.com")
+                    }
+                }
+            }
+        }
+    }
+
+    repositories {
+        maven {
+            name = "Artifactory"
+            url = uri("https://your-company.jfrog.io/artifactory/gradle-plugins")
+            credentials {
+                username = project.findProperty("artifactory.username") as String?
+                    ?: System.getenv("ARTIFACTORY_USERNAME")
+                password = project.findProperty("artifactory.password") as String?
+                    ?: System.getenv("ARTIFACTORY_PASSWORD")
+            }
         }
     }
 }

@@ -38,7 +38,7 @@ output.json
 *.ap_
 *.dex
 *.class
-
+.env
 # IntelliJ
 out/
 
